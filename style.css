@@ -1,9 +1,5 @@
 body {
     background-color: #f5f1e8;
-}
-
-body {
-    background-color: #f5f1e8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 40px 20px;
@@ -39,65 +35,9 @@ section {
 .workout {
     text-align: center;
 }
-
-.goal-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.goal {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-}
-
-.goal input {
-    width: 20px;
-    height: 20px;
-}
-
-body {
-    background-color: #f5f1e8;
-}
-
-body {
-    background-color: #f5f1e8;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 40px 20px;
-}
-
-.challenge-interface {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-header p {
-    font-size: 18px;
-    margin-top: 8px;
-}
-
-section {
-    background-color: white;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 20px;
-}
-
-.workout {
-    text-align: center;
+.workout h3 {
+    font-size: 28px;
+    margin: 10px 0 20px;
 }
 
 .goal-list {
@@ -116,12 +56,4 @@ section {
 .goal input {
     width: 20px;
     height: 20px;
-}
-.workout h3 {
-    font-size: 28px;
-    margin: 10px 0 20px;
-}
-.workout h3 {
-    font-size: 28px;
-    margin: 10px 0 20px;
 }
