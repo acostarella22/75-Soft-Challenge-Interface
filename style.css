@@ -1,9 +1,13 @@
 body {
     background-color: #f5f1e8;
+}
+body {
+    background-color: #f5f1e8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 40px 20px;
-        .challenge-interface {
+}
+.challenge-interface {
     max-width: 700px;
     margin: 0 auto;
 }
