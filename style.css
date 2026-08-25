@@ -51,9 +51,23 @@ section {
     align-items: center;
     gap: 12px;
     font-size: 18px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
 }
 
 .goal input {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    accent-color: #6b7d5a;
 }
+
+.goal:has(input:checked) {
+    background-color: #eef2e8;
+}
+
+.goal:has(input:checked) span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
