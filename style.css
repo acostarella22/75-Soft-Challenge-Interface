@@ -28,3 +28,19 @@ header p {
     font-size: 18px;
     margin-top: 8px;
 }
+
+section {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.workout {
+    text-align: center;
+}
+
+.workout h3 {
+    font-size: 28px;
+    margin: 10px 0 20px;
+}
