@@ -2,6 +2,7 @@ const goals = document.querySelectorAll(".goal");
 const goalStatus = document.querySelector("#goal-status");
 const workoutName = document.querySelector("#workout-name");
 const workoutType = document.querySelector("#workout-type");
+const workoutDetails = document.querySelector("#workout-details");
 
 goals.forEach(function(goal) {
 
@@ -60,3 +61,4 @@ console.log(today);
 
 workoutName.textContent = today.workout;
 workoutType.textContent = today.workoutType;
+workoutDetails.textContent = today.workoutDetails;
