@@ -27,3 +27,26 @@ const savedState = localStorage.getItem(goalName);
 }
     });
 });
+
+const challengeData = {
+    1: {
+        date: "August 24, 2026",
+        workout: "Long Run #1",
+        workoutType: "Run",
+        workoutDetails: "3 × 1 mile with 0.25 mile rest between intervals, plus 0.25 mile warm-up and cooldown."
+    },
+
+    2: {
+        date: "August 25, 2026",
+        workout: "Cycle 1 Lift",
+        workoutType: "Lift",
+        workoutDetails: "Cycle 1 full-body circuit. Complete 3 rotations with 1 minute rest between exercises."
+    },
+
+    3: {
+        date: "August 26, 2026",
+        workout: "Yoga",
+        workoutType: "Yoga",
+        workoutDetails: "Yoga class."
+    }
+};
