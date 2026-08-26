@@ -2,6 +2,15 @@ const goals = document.querySelectorAll(".goal");
 const goalStatus = document.querySelector("#goal-status");
 
 goals.forEach(function(goal) {
+
+const goalName = goal.querySelector("span").textContent;
+const checkbox = goal.querySelector("input");
+const savedState = localStorage.getItem(goalName);
+    
+    if (savedState === "true") {
+    checkbox.checked = true;
+}
+    
     goal.addEventListener("click", function() {
         const goalName = goal.querySelector("span").textContent;
         const checkbox = goal.querySelector("input");
