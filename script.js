@@ -1,5 +1,6 @@
 const goals = document.querySelectorAll(".goal");
 const goalStatus = document.querySelector("#goal-status");
+const workoutName = document.querySelector("#workout-name");
 
 goals.forEach(function(goal) {
 
@@ -51,7 +52,9 @@ const challengeData = {
     }
 };
 
-const currentDay = 2;
+const currentDay = 1;
 const today = challengeData[currentDay];
 
 console.log(today);
+
+workoutName.textContent = today.workout;
