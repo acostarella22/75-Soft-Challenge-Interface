@@ -53,7 +53,7 @@ const challengeData = {
     }
 };
 
-const currentDay = 2;
+const currentDay = 1;
 const today = challengeData[currentDay];
 
 console.log(today);
