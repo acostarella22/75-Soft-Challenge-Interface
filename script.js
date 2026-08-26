@@ -76,6 +76,6 @@ nextDayButton.addEventListener("click", function(event) {
     currentDay = currentDay + 1;
 
     console.log("Current day:", currentDay);
-});
 
 updateInterface();
+});
