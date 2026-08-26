@@ -3,6 +3,7 @@ const goalStatus = document.querySelector("#goal-status");
 const workoutName = document.querySelector("#workout-name");
 const workoutType = document.querySelector("#workout-type");
 const workoutDetails = document.querySelector("#workout-details");
+const nextDayButton = document.querySelector("#next-day");
 
 goals.forEach(function(goal) {
 
@@ -54,7 +55,7 @@ const challengeData = {
     }
 };
 
-const currentDay = 1;
+let currentDay = 1;
 const today = challengeData[currentDay];
 
 console.log(today);
@@ -62,3 +63,10 @@ console.log(today);
 workoutName.textContent = today.workout;
 workoutType.textContent = today.workoutType;
 workoutDetails.textContent = today.workoutDetails;
+nextDayButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    currentDay = currentDay + 1;
+
+    console.log("Current day:", currentDay);
+});
