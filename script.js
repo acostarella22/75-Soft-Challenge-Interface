@@ -9,6 +9,10 @@ goals.forEach(function(goal) {
         console.log(goalName + " was clicked!");
         console.log(checkbox.checked);
         
-        goalStatus.textContent = goalName + " completed!";
+        if (checkbox.checked) {
+    goalStatus.textContent = goalName + " completed!";
+} else {
+    goalStatus.textContent = goalName + " not completed.";
+}
     });
 });
