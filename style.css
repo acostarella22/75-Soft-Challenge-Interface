@@ -71,3 +71,16 @@ section {
     opacity: 0.6;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
