@@ -11,8 +11,10 @@ goals.forEach(function(goal) {
         
         if (checkbox.checked) {
     goalStatus.textContent = goalName + " completed!";
+    localStorage.setItem(goalName, "true");
 } else {
     goalStatus.textContent = goalName + " not completed.";
+    localStorage.setItem(goalName, "false");
 }
     });
 });
