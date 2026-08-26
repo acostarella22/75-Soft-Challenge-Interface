@@ -60,9 +60,16 @@ const today = challengeData[currentDay];
 
 console.log(today);
 
-workoutName.textContent = today.workout;
-workoutType.textContent = today.workoutType;
-workoutDetails.textContent = today.workoutDetails;
+function updateInterface() {
+    const today = challengeData[currentDay];
+
+    workoutName.textContent = today.workout;
+    workoutType.textContent = today.workoutType;
+    workoutDetails.textContent = today.workoutDetails;
+}
+
+updateInterface();
+
 nextDayButton.addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -70,3 +77,5 @@ nextDayButton.addEventListener("click", function(event) {
 
     console.log("Current day:", currentDay);
 });
+
+updateInterface();
