@@ -79,19 +79,21 @@ updateInterface();
 nextDayButton.addEventListener("click", function(event) {
     event.preventDefault();
 
-    currentDay = currentDay + 1;
+    if (currentDay < 75) {
+        currentDay = currentDay + 1;
+        updateInterface();
+    }
 
     console.log("Current day:", currentDay);
-
-updateInterface();
 });
 
 previousDayButton.addEventListener("click", function(event) {
     event.preventDefault();
 
-    currentDay = currentDay - 1;
+    if (currentDay > 1) {
+        currentDay = currentDay - 1;
+        updateInterface();
+    }
 
     console.log("Current day:", currentDay);
-
-    updateInterface();
 });
