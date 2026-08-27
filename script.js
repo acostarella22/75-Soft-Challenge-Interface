@@ -12,28 +12,18 @@ let currentDay = 1;
 
 goals.forEach(function(goal) {
 
-const goalName = goal.querySelector("span").textContent;
-const checkbox = goal.querySelector("input");
-const savedState = localStorage.getItem("day-" + currentDay + "-" + goalName);
-    
-    if (savedState === "true") {
-    checkbox.checked = true;
-}
-    
     goal.addEventListener("click", function() {
-        const goalName = goal.querySelector("span").textContent;
-        const checkbox = goal.querySelector("input");
+    
+    const goalName = goal.querySelector("span").textContent;
+    const checkbox = goal.querySelector("input");
         
-        console.log(goalName + " was clicked!");
-        console.log(checkbox.checked);
-        
-        if (checkbox.checked) {
-    goalStatus.textContent = goalName + " completed!";
-    localStorage.setItem("day-" + currentDay + "-" + goalName, "true");
-} else {
+    if (checkbox.checked) {
+        goalStatus.textContent = goalName + " completed!";
+        localStorage.setItem("day-" + currentDay + "-" + goalName, "true");
+    } else {
     goalStatus.textContent = goalName + " not completed.";
    localStorage.setItem("day-" + currentDay + "-" + goalName, "false");
-}
+        }
     });
 });
 
@@ -59,10 +49,6 @@ const challengeData = {
         workoutDetails: "Yoga class."
     }
 };
-
-const today = challengeData[currentDay];
-
-console.log(today);
 
 function updateInterface() {
     const today = challengeData[currentDay];
@@ -92,7 +78,6 @@ nextDayButton.addEventListener("click", function(event) {
         updateInterface();
     }
 
-    console.log("Current day:", currentDay);
 });
 
 previousDayButton.addEventListener("click", function(event) {
