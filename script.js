@@ -4,6 +4,7 @@ const workoutName = document.querySelector("#workout-name");
 const workoutType = document.querySelector("#workout-type");
 const workoutDetails = document.querySelector("#workout-details");
 const nextDayButton = document.querySelector("#next-day");
+const previousDayButton = document.querySelector("#previous-day");
 
 goals.forEach(function(goal) {
 
@@ -78,4 +79,14 @@ nextDayButton.addEventListener("click", function(event) {
     console.log("Current day:", currentDay);
 
 updateInterface();
+});
+
+previousDayButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    currentDay = currentDay - 1;
+
+    console.log("Current day:", currentDay);
+
+    updateInterface();
 });
