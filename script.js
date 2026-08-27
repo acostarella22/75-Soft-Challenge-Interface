@@ -160,6 +160,7 @@ for (let day = 1; day <= 75; day++) {
 }
 
 function updateInterface() {
+    const today = challengeData[currentDay];
 
     dayNumber.textContent = "Day " + currentDay + " of 75";
     currentDate.textContent = today.date;
