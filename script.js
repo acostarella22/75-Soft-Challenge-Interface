@@ -29,10 +29,10 @@ const savedState = localStorage.getItem("day-" + currentDay + "-" + goalName);
         
         if (checkbox.checked) {
     goalStatus.textContent = goalName + " completed!";
-    localStorage.setItem(goalName, "true");
+    localStorage.setItem("day-" + currentDay + "-" + goalName, "true");
 } else {
     goalStatus.textContent = goalName + " not completed.";
-    localStorage.setItem(goalName, "false");
+   localStorage.setItem("day-" + currentDay + "-" + goalName, "false");
 }
     });
 });
