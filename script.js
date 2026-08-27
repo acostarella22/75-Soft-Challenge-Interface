@@ -8,11 +8,13 @@ const previousDayButton = document.querySelector("#previous-day");
 const dayNumber = document.querySelector("#day-number");
 const currentDate = document.querySelector("#current-date");
 
+let currentDay = 1;
+
 goals.forEach(function(goal) {
 
 const goalName = goal.querySelector("span").textContent;
 const checkbox = goal.querySelector("input");
-const savedState = localStorage.getItem(goalName);
+const savedState = localStorage.getItem("day-" + currentDay + "-" + goalName);
     
     if (savedState === "true") {
     checkbox.checked = true;
@@ -58,7 +60,6 @@ const challengeData = {
     }
 };
 
-let currentDay = 1;
 const today = challengeData[currentDay];
 
 console.log(today);
