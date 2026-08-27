@@ -5,6 +5,8 @@ const workoutType = document.querySelector("#workout-type");
 const workoutDetails = document.querySelector("#workout-details");
 const nextDayButton = document.querySelector("#next-day");
 const previousDayButton = document.querySelector("#previous-day");
+const dayNumber = document.querySelector("#day-number");
+const currentDate = document.querySelector("#current-date");
 
 goals.forEach(function(goal) {
 
@@ -64,6 +66,9 @@ console.log(today);
 function updateInterface() {
     const today = challengeData[currentDay];
 
+    dayNumber.textContent = "Day " + currentDay + " of 75";
+    currentDate.textContent = today.date;
+    
     workoutName.textContent = today.workout;
     workoutType.textContent = today.workoutType;
     workoutDetails.textContent = today.workoutDetails;
