@@ -8,7 +8,11 @@ const previousDayButton = document.querySelector("#previous-day");
 const dayNumber = document.querySelector("#day-number");
 const currentDate = document.querySelector("#current-date");
 
-let currentDay = 1;
+let currentDay = Number(new URLSearchParams(window.location.search).get("day")) || 1;
+
+if (currentDay < 1 || currentDay > 75) {
+    currentDay = 1;
+}
 
 goals.forEach(function(goal) {
 
