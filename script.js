@@ -73,6 +73,13 @@ function updateInterface() {
     workoutName.textContent = today.workout;
     workoutType.textContent = today.workoutType;
     workoutDetails.textContent = today.workoutDetails;
+    goals.forEach(function(goal) {
+    const goalName = goal.querySelector("span").textContent;
+    const checkbox = goal.querySelector("input");
+    const savedState = localStorage.getItem("day-" + currentDay + "-" + goalName);
+
+    checkbox.checked = savedState === "true";
+});
 }
 
 updateInterface();
