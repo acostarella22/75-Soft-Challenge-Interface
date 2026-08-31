@@ -34,7 +34,7 @@ goals.forEach(function(goal) {
 const challengeData = {};
 
 const startDate = new Date("2026-08-31T00:00:00");
-let currentDay = Number(new URLSearchParams(window.location.search).get("day")) || 1;
+
 const resetVersion = "2026-08-31";
 
 if (localStorage.getItem("resetVersion") !== resetVersion) {
