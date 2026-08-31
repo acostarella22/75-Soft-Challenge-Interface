@@ -33,7 +33,21 @@ goals.forEach(function(goal) {
 
 const challengeData = {};
 
-const startDate = new Date("2026-08-24T00:00:00");
+const startDate = new Date("2026-08-31T00:00:00");
+let currentDay = Number(new URLSearchParams(window.location.search).get("day")) || 1;
+const resetVersion = "2026-08-31";
+
+if (localStorage.getItem("resetVersion") !== resetVersion) {
+
+    for (let day = 1; day <= 75; day++) {
+        localStorage.removeItem("day-" + day + "-Diet");
+        localStorage.removeItem("day-" + day + "-Hydration");
+        localStorage.removeItem("day-" + day + "-Exercise");
+        localStorage.removeItem("day-" + day + "-Cognition");
+    }
+
+    localStorage.setItem("resetVersion", resetVersion);
+}
 
 const longRunWorkouts = [
     {
